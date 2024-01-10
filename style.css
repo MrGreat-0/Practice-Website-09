@@ -49,7 +49,8 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 0 3vw;
-    border-bottom: 1px solid #222;
+    border-bottom: 1px solid #3a3838c4;
+    background-color: #b1a79c52;
 
 }
 
@@ -100,8 +101,8 @@ body {
     height: 100%;
     width: 30%;
     /* background: blue; */
-    border-left: #a5a5a5 solid 2px;
-    border-right: #a5a5a5 solid 2px;
+    border-left: #8d8282 solid 1px;
+    border-right: #8d8282 solid 1px;
     text-align: center;
     padding: 1vw 2vw;
     position: relative;
@@ -332,6 +333,7 @@ body {
     height: 35vw;
     margin-top: 1.5vw;
     margin-bottom: 2.5vw;
+    border: 1px solid #3a3838c4;
 
 }
 
@@ -359,6 +361,7 @@ body {
 
     width: 59vw;
     height: 55%;
+    border: 1px solid #3a3838c4;
 
 }
 
@@ -550,6 +553,7 @@ body {
     height: 100%;
     width: 100%;
     object-fit: cover;
+    border: 1px solid #3a3838c4;
 
 }
 
@@ -737,7 +741,7 @@ body {
     width: 14.5vw;
     height: 22.5vw;
     object-fit: cover;
-    border: #1d1d1b 1px solid;
+    border: 1px solid #3a3838c4;
 
 }
 
@@ -768,6 +772,7 @@ body {
 #page5-0right img {
 
     width: 100%;
+    border: 1px solid #3a3838c4;
 
 }
 
@@ -786,7 +791,7 @@ body {
     width: 25vw;
     height: 22vw;
     object-fit: cover;
-    border: #1d1d1b 1px solid;
+    border: 1px solid #3a3838c4;
 
 }
 
@@ -909,7 +914,7 @@ body {
     margin-right: 1vw;
     color: #1C1C19;
     animation: scroll;
-    animation-duration: 4s;
+    animation-duration: 4.5s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 
@@ -1010,6 +1015,7 @@ body {
     /* justify-content: space-between; */
     align-items: center;
     gap: 1vw;
+    margin-right: 1.3vw;
 
 }
 
@@ -1029,12 +1035,6 @@ body {
 }
 
 @media (max-width:550px) {
-
-    #page0 #nav {
-
-        background-color: #a3978852;
-
-    }
 
     #page0 #nav h5 {
 
@@ -1289,32 +1289,34 @@ body {
 
     }
 
-    /*  */
+    #page5 #page5-prt0 #page5-0left {
 
-    #page5 #page5-prt0 #page5-0lt {
-        white-space: nowrap;
-    }
-
-    #page5 #page5-prt0 #page5-0lb {
-        white-space: nowrap;
-    }
-
-    #page5 #page5-prt0 #page5-0lt h1 {
-        display: inline-block;
-    }
-
-    #page5 #page5-prt0 #page5-0lb h1 {
-        display: inline-block;
-    }
-
-    #page5 #page5-prt0 h1 {
-
-        font-size: 20vw;
-        display: inline-block;
+        width: 95%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
 
     }
 
-    /*  */
+    #page5-0left h1 {
+
+        font-size: 35vw;
+        padding-top: 4vw;
+        padding-right: 0vw;
+
+    }
+
+    #page5-0left #page5-0lb h1 {
+
+        padding-top: 7vw;
+
+    }
+
+    #page5-prt1 h1 {
+
+        font-size: 37vw;
+
+    }
 
     #page5 #page5-prt1 {
 
@@ -1399,7 +1401,7 @@ body {
 
     }
 
-    /* Jugaad fot hover */
+    /* Jugaad for hover */
 
     .elem1 h2:hover::after {
 

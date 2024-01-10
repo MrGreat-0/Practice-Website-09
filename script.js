@@ -24,27 +24,3 @@ tl.to("#main", {
     delay: 0.5,
     duration: 1.5
 })
-
-// let mm = gsap.matchMedia();
-// mm.add("(max-width: 550px)", () => {
-
-//     gsap.to("#main", {
-//         y: "0",
-//         scale: 0.8,
-//         duration: 0
-//     })
-
-// gsap.to("#main", {
-//     y: "-35vh",
-//     duration: 1.5,
-//     delay: 0.7
-// })
-
-// gsap.to("#main", {
-//     y: "150vh",
-//     scale: 1,
-//     delay: 0.5,
-//     duration: 1.5
-// })
-
-// });
