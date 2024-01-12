@@ -29,6 +29,8 @@ body {
     /* width: 100%; */
     background-color: #C4BCB3;
     user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    overflow: hidden;
 
 }
 
@@ -92,6 +94,7 @@ body {
 
     height: 100%;
     width: 30%;
+    cursor: pointer;
     /* background: blue; */
 
 }
@@ -115,6 +118,7 @@ body {
 
     height: 100%;
     width: 30%;
+    cursor: pointer;
     /* background: blue; */
 
 }
@@ -125,6 +129,7 @@ body {
     width: 28vw;
     overflow: hidden;
     border: #222 1px solid;
+    margin-left: 0.5vw;
 
 }
 
@@ -137,7 +142,13 @@ body {
 
 }
 
-.image-div:hover img {
+.elem0:hover img {
+
+    scale: 1.1;
+
+}
+
+.elem2:hover img {
 
     scale: 1.1;
 
@@ -147,8 +158,9 @@ body {
 
     font-family: canopee;
     font-size: 1.8vw;
-    margin-top: 1.2vw;
-    margin-bottom: 1vw;
+    margin: 1.2vw 0 1vw 0.5vw;
+    display: flex;
+    align-items: center;
 
 }
 
@@ -159,7 +171,7 @@ body {
     padding: 0.15vw;
     border-radius: 5px;
     font-size: 1.2vw;
-    margin-left: 0.2vw;
+    margin-left: 0.4vw;
 
 }
 
@@ -170,9 +182,9 @@ body {
     font-size: 1.3vw;
     font-weight: 100;
     color: #656565;
+    margin-left: 0.5vw;
 
 }
-
 
 .elem1 h2 {
 
@@ -183,35 +195,43 @@ body {
 
 }
 
-.elem1 h2::after {
+/* Jugaad for Circle */
 
-    content: "";
-    height: 4.4vw;
-    width: 16vw;
-    border: #00000083 1px solid;
-    border-radius: 50%;
+.elem1 {
+    position: relative;
+    /* display: block;
+    padding: 10px; */
+}
+
+.elem1 svg {
     position: absolute;
-    left: 6vw;
-    z-index: 99;
-    opacity: 0;
-    transition-timing-function: all ease-in ease-in-out;
-    transform: scaleX(0);
-    transition: 0.3s;
+    top: 17%;
+    /* left: 50%; */
+    transform: translate(-50%, -50%) rotateX(180deg);
+    width: 16vw;
+    height: 4vw;
+    z-index: -1;
+}
 
+.elem1 svg path {
+    fill: transparent;
+    stroke-width: 2.5px;
+    stroke: currentColor;
+    stroke-dashoffset: -1210.709716796875;
+    stroke-dasharray: 1210.709716796875;
+    transition: stroke-dashoffset 0.5s cubic-bezier(0.29, 0.68, 0.74, 1.02);
+}
+
+.circle:hover svg path {
+    stroke-dashoffset: 0;
 }
 
 
-.elem1 h2:hover::after {
-
-    transform: scaleX(1);
-    opacity: 1;
-
-}
+/*  */
 
 .elem1 h3 {
 
     font-size: 2.9vw;
-    /* font-family: domaine; */
     font-weight: 100;
     margin-top: 1vw;
     margin-bottom: 1.2vw;
@@ -243,6 +263,9 @@ body {
     font-size: 1.8vw;
     margin-top: 1.2vw;
     margin-bottom: 1vw;
+    padding-left: 0.5vw;
+    display: flex;
+    align-items: center;
 
 }
 
@@ -253,7 +276,7 @@ body {
     padding: 0.15vw;
     border-radius: 5px;
     font-size: 1.2vw;
-    margin-left: 0.2vw;
+    margin-left: 0.5vw;
 
 }
 
@@ -264,6 +287,7 @@ body {
     font-size: 1.3vw;
     font-weight: 100;
     color: #656565;
+    padding-left: 0.5vw;
 
 }
 
@@ -491,6 +515,7 @@ body {
     width: 55%;
     padding-left: 3vw;
     border-left: #222 1px solid;
+    cursor: pointer;
 
 }
 
@@ -503,7 +528,7 @@ body {
 
 }
 
-#page3-image:hover img {
+#page3-ltr:hover img {
 
     scale: 1.1;
 
@@ -857,17 +882,154 @@ body {
 
 }
 
-#page6 {}
+#page6 {
+
+    width: 100%;
+    margin-top: 2.5vw;
+    /* overflow: hidden; */
+
+}
+
+#cards {
+
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 2.5vw;
+
+}
+
+.card0,
+.card1,
+.card2,
+.card3 {
+
+    height: 25vw;
+    width: 42vw;
+    border: #000 2.5px solid;
+    border-radius: 0.8vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #CAC1B6;
+    padding: 0vw 0.8vw;
+    transition: all 0.8s ease-out;
+    box-shadow: -4px 4px 6px rgba(29, 29, 27, .2);
+
+}
+
+.card-b {
+
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23333' stroke-width='2.5' stroke-dasharray='12' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+    height: 23.5vw;
+    width: 40.5vw;
+    border-radius: 10px;
+    padding: 1.2vw 2vw;
+
+}
+
+.card-b p {
+
+    font-size: 2vw;
+    font-weight: 100;
+    text-decoration: underline;
+    font-family: Playfair Display;
+
+}
+
+.card-b .by .photo {
+
+    width: 3vw;
+    height: 3vw;
+    background: #00000081;
+    border-radius: 50%;
+    border: #000 1px solid;
+
+}
+
+.by {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 49%;
+    padding-top: 5vw;
+
+}
+
+.inf {
+    line-height: 0.9;
+}
+
+.by .inf h3 {
+
+    font-family: canopee;
+    font-weight: 100;
+    font-size: 2vw;
+
+}
+
+.by .inf h5 {
+
+    font-family: playfair display;
+    font-weight: 100;
+    font-size: 1.5vw;
+
+}
+
+.card1 {
+    transform: translateX(-58%);
+}
+
+.card2 {
+    transform: translateX(-116%);
+}
+
+.card3 {
+    transform: translateX(-174%);
+}
+
+.card0:hover~.card1 {
+    transform: translateX(-5%);
+}
+
+.card0:hover~.card2 {
+    transform: translateX(-65%);
+}
+
+.card0:hover~.card3 {
+    transform: translateX(-125%);
+}
+
+.card1:hover~.card2 {
+    transform: translateX(-63%);
+}
+
+.card1:hover~.card3 {
+    transform: translateX(-121%);
+}
+
+.card2:hover~.card3 {
+    transform: translateX(-123%);
+}
 
 #page7 {
 
-    width: 100%;
+    width: 92%;
+    border-top: 1px solid #1c1c1950;
+    margin: 6.5vw 0 2vw 4vw;
+
+}
+
+#page7 .elem0 {
+
+    margin-left: -2vw;
 
 }
 
 #page7 .elem1 {
 
-    padding: 0;
+    margin-left: 2vw;
 
 }
 
@@ -1368,11 +1530,90 @@ body {
 
     }
 
+    #page6 {
+
+        width: 97.5%;
+        padding-top: 5vw;
+
+    }
+
+    #page6 #cards {
+
+        width: 100%;
+        flex-direction: column;
+
+    }
+
+    #page6 .card0,
+    .card1 {
+
+        width: 92vw;
+        height: 63vw;
+        border-radius: 10px;
+        margin: 2.5vw 0;
+        transform: none;
+
+    }
+
+    /* Jugaad for hover */
+
+    #page6 .card0:hover~.card1 {
+
+        transform: translateX(0);
+
+    }
+
+    /*  */
+
+    #page6 .card-b {
+
+        width: 87vw;
+        height: 58vw;
+        border-radius: 10px;
+
+    }
+
+    #page6 .card-b p {
+
+        width: 100%;
+        font-size: 6vw;
+        margin: 1vw 0 0 2vw;
+
+    }
+
+    #page6 .by {
+        width: 400%;
+    }
+
+    #page6 .by .photo {
+
+        width: 11vw;
+        height: 11vw;
+        margin: 0 2.5vw 0 2.5vw;
+
+    }
+
+    #page6 .by .inf {
+        width: 100%;
+    }
+
+    #page6 .by .inf h3 {
+        font-size: 6.5vw;
+    }
+
+    #page6 .by .inf h5 {
+        font-size: 3.5vw;
+    }
+
+    #page6 .card2,
+    .card3 {
+        display: none;
+    }
+
     #page7 {
 
         /* height: 150vw; */
-        width: 100%;
-        padding-left: 5vw;
+        width: 90%;
         padding-bottom: 15vw;
 
     }
@@ -1381,7 +1622,6 @@ body {
 
         flex-direction: column;
         height: auto;
-        border-top: #00000060 1px solid;
         width: 93%;
         margin-top: 3vw;
 
@@ -1401,30 +1641,45 @@ body {
 
     }
 
+    #page7 .elem1 .circle svg {
+        display: none;
+    }
+
     /* Jugaad for hover */
 
-    .elem1 h2:hover::after {
-
-        transform: scaleX(0);
-        opacity: 0;
-
+    @media (hover: hover) {
+        .elem1 .circle:hover svg path {
+            fill: transparent;
+            stroke-width: 0;
+            stroke: transparent;
+            stroke-dashoffset: -1210.709716796875;
+            stroke-dasharray: 1210.709716796875;
+            transition: stroke-dashoffset 0.5s cubic-bezier(0.29, 0.68, 0.74, 1.02);
+        }
     }
 
     /*  */
 
     #page7 .elem1 h2 {
 
-        font-size: 35vw;
-        /* letter-spacing: -2.5vw; */
-        line-height: 0.85;
-        margin-left: -1vw;
+        font-size: 80vw;
+        line-height: 0.4;
+        padding-top: 10vw;
 
     }
+
+    #page7 .elem1 h2 span {
+
+        font-size: 37vw;
+        margin-left: -4.5vw;
+
+    }
+
 
     #page7 .elem1 h3 {
 
         font-size: 7vw;
-        padding-top: 5vw;
+        padding-top: 9vw;
         text-align: left;
 
     }
@@ -1448,7 +1703,6 @@ body {
 
         width: 89vw;
         height: 40vw;
-        /* margin-left: -5vw; */
 
     }
 
@@ -1457,7 +1711,6 @@ body {
         font-size: 8vw;
         display: flex;
         align-items: center;
-        /* margin-left: -4.5vw; */
         padding-top: 2vw;
 
     }
@@ -1475,7 +1728,6 @@ body {
     #page7 .elem2 p {
 
         font-size: 5vw;
-        /* margin-left: -4vw; */
         margin-top: 2vw;
 
     }
@@ -1520,7 +1772,7 @@ body {
     #page9 {
 
         width: 100%;
-        padding: 9vw 5vw;
+        padding: 9vw 0 9vw 4vw;
 
     }
 
